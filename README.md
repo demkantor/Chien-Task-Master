@@ -17,6 +17,7 @@ currently this is working with sqlite, goal is to move the DB to postgres
     -virtualenv env
     -source env/bin/activate
     -pip3 install flask flask-sqlalchemy
+    -deactivate
     -FLASK_APP=app FLASK_DEBUG=1 flask run --port 3000 --host 127.0.0.1
     -in browser go to http://127.0.0.1:3000/
 
@@ -28,6 +29,7 @@ currently this is working with sqlite, goal is to move the DB to postgres
     -virtualenv env
     -source env/bin/activate
     -pip3 install flask flask-sqlalchemy
+    -deactivate
     -python3 app.py
     -in browser go to http://localhost:5000/
 
@@ -39,16 +41,18 @@ currently this is working with sqlite, goal is to move the DB to postgres
     -virtualenv env
     -source env/bin/activate
     -pip3 install flask flask-sqlalchemy psycopg2
+    -deactivate
     -python3 postgres.py
     -in browser go to http://localhost:5000/
 
-## macOS
+## macOS - run repo
     -create db --- see databse.sql
     -fork and clone repository
     -cd to repository
     -python3 -m venv venv
     -. venv/bin/activate
     -pip3 install flask flask-sqlalchemy psycopg2
+    -deactivate
     -python3 postgres.py
     -in browser go to http://localhost:5000/
 
