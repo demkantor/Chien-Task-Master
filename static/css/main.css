@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    background-color: bisque;
+}
+
+.center{
+    text-align: center;
+}
+
+.content{
+    text-align: center;
+    margin: 2vw;
+    padding: 2vw;
+}
+
+.delete {
+    background-color: rgb(245, 27, 27);
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.delete:hover{
+    transform: scale(1.1);
+    background-color: rgb(223, 20, 20);
+}
+
+.update {
+    background-color: rgb(30, 34, 245);
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.update:hover{
+    transform: scale(1.1);
+    background-color: rgb(9, 12, 192);
+}
+
+table { 
+    border-collapse: collapse; 
+    width: 100%; 
+  } 
+  
+  th, td { 
+    text-align: left; 
+    padding: 8px; 
+  } 
+  
+  th {
+    background-color: darkgray; 
+  }
+  
+  tr:nth-child(even) { 
+    background-color: #c5c5c5; 
+  } 
