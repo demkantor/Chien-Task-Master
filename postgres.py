@@ -106,4 +106,8 @@ def update(id):
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run(debug=True)
+=======
+    app.run(debug=True)
+>>>>>>> 8a55ce6aefc1b0c208dee37f529814ae2cbd3b0a
