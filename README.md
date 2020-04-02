@@ -47,8 +47,16 @@ currently this is working with sqlite, goal is to move the DB to postgres
     -fork and clone repository
     -cd to repository
     -python3 -m venv venv
-    -virtualenv env
     -. venv/bin/activate
     -pip3 install flask flask-sqlalchemy psycopg2
     -python3 postgres.py
     -in browser go to http://localhost:5000/
+
+
+## change or remove postgres user name password
+    -- in python.pg change line 12
+    from 
+        DB_URL = 'postgres+psycopg2://con:secretpass@localhost:5432/todo'
+    to    
+        DB_URL = 'postgres+psycopg2://@localhost:5432/todo'
+    

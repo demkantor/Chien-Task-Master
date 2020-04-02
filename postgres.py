@@ -9,25 +9,6 @@ import psycopg2
 import os
 
 #connect to db
-con = psycopg2.connect(
-    database= "taskmaster",
-    host="localhost",
-    user="con",
-    password="secretpass",
-    port='5432')
-
-Base = declarative_base()
-
-class Task(Base):
-    __tablename__ = 'tasks'
-    id = Column(Integer, primary_key=True)
-    content = Column(String)
-    date_created  = Column(String)
-    
-    def __repr__(self):
-        return "<Task(task='{}')>"\
-                .format(self.task)
-
 DB_URL = 'postgres+psycopg2://con:secretpass@localhost:5432/todo'
 
 
@@ -106,8 +87,4 @@ def update(id):
 
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     app.run(debug=True)
-=======
-    app.run(debug=True)
->>>>>>> 8a55ce6aefc1b0c208dee37f529814ae2cbd3b0a
