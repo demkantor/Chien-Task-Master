@@ -32,4 +32,12 @@ currently this is working with sqlite, goal is to move the DB to postgres
     -in browser go to http://localhost:5000/
 
 ## set up postgres
-    -
+    -create db --- see databse.sql
+    -fork and clone repository
+    -cd to repository
+    -pip3 install virtualenv
+    -virtualenv env
+    -source env/bin/activate
+    -pip3 install flask flask-sqlalchemy
+    -python3 postgres.py
+    -in browser go to http://localhost:5000/
