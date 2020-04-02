@@ -52,11 +52,10 @@ currently this is working with sqlite, goal is to move the DB to postgres
     -python3 postgres.py
     -in browser go to http://localhost:5000/
 
-
 ## change or remove postgres user name password
     -- in python.pg change line 12
+
     from 
         DB_URL = 'postgres+psycopg2://con:secretpass@localhost:5432/todo'
     to    
         DB_URL = 'postgres+psycopg2://@localhost:5432/todo'
-    
