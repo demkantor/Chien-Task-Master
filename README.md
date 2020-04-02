@@ -7,7 +7,7 @@ currently this is working with sqlite, goal is to move the DB to postgres
     -sudo apt-get install python3.6
     -sudo apt install python3-pip
     -sudo apt-get install psycopg2 libpq-dev python-dev
-    -pip install flask-sqlalchemy psycopg2
+    -pip3 install flask-sqlalchemy psycopg2
     -sudo apt-get install sqlite3 libsqlite3-dev
 
 ## get repository running
@@ -38,6 +38,17 @@ currently this is working with sqlite, goal is to move the DB to postgres
     -pip3 install virtualenv
     -virtualenv env
     -source env/bin/activate
-    -pip3 install flask flask-sqlalchemy
+    -pip3 install flask flask-sqlalchemy psycopg2
+    -python3 postgres.py
+    -in browser go to http://localhost:5000/
+
+## macOS
+    -create db --- see databse.sql
+    -fork and clone repository
+    -cd to repository
+    -python3 -m venv venv
+    -virtualenv env
+    -. venv/bin/activate
+    -pip3 install flask flask-sqlalchemy psycopg2
     -python3 postgres.py
     -in browser go to http://localhost:5000/
