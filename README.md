@@ -14,7 +14,8 @@ currently this is working with sqlite, goal is to move the DB to postgres
     -fork and clone repository
     -cd to repository
     -pip3 install virtualenv
-    -source /env/bin/activate
+    -virtualenv env
+    -source env/bin/activate
     -pip3 install flask flask-sqlalchemy
     -FLASK_APP=app FLASK_DEBUG=1 flask run --port 3000 --host 127.0.0.1
     -in browser go to http://127.0.0.1:3000/
@@ -24,7 +25,8 @@ currently this is working with sqlite, goal is to move the DB to postgres
     -fork and clone repository
     -cd to repository
     -pip3 install virtualenv
-    -source /env/bin/activate
+    -virtualenv env
+    -source env/bin/activate
     -pip3 install flask flask-sqlalchemy
     -python3 app.py
     -in browser go to http://localhost:5000/
