@@ -11,12 +11,13 @@ import os
 #connect to db
 DB_URL = 'postgres+psycopg2://con:secretpass@localhost:5432/todo'
 
-
+#setting config for sqlalchemy and postgres
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False 
 db = SQLAlchemy(app)
 
+#a class to make our model for sql database
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
@@ -25,6 +26,7 @@ class Todo(db.Model):
     def __repr__(self):
         return '<Task %r' % self.id
 
+#command to drop db and create new one
 @app.cli.command('resetdb')
 def resetdb_command():
     """Destroys and creates the database + tables."""
@@ -41,6 +43,7 @@ def resetdb_command():
     db.create_all()
     print('Shiny!')
 
+#creates the route and sets the methods to home
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
@@ -58,6 +61,7 @@ def index():
         tasks = Todo.query.order_by(Todo.date_created).all()
         return render_template('index.html', tasks=tasks)
 
+# creates delete route
 @app.route('/delete/<int:id>')
 def delete(id):
     task_to_delete = Todo.query.get_or_404(id)
@@ -69,7 +73,7 @@ def delete(id):
     except:
         return 'no delete my friend, its mine!'
 
-
+#creates the put route
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
     task = Todo.query.get_or_404(id)
@@ -85,6 +89,6 @@ def update(id):
     else:
         return render_template('update.html', task=task)
 
-
+#this makes this run only from postgres.py also sets debugging mode on
 if __name__ == "__main__":
     app.run(debug=True)
