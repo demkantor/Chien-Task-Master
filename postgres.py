@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine, Column, Integer, String, Date
 from datetime import datetime
 import psycopg2
-import os
+
 
 #connect to db
 DB_URL = 'postgres+psycopg2://con:secretpass@localhost:5432/todo'

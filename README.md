@@ -1,6 +1,6 @@
 # Task list with python
 
-currently this is working with sqlite, goal is to move the DB to postgres
+currently this is working with sqlite for app.py and postgres for postgres.py
 
 ## setup for debian based linux
     -sudo apt-get update
@@ -52,6 +52,7 @@ currently this is working with sqlite, goal is to move the DB to postgres
     -python3 -m venv venv
     -. venv/bin/activate
     -pip3 install flask flask-sqlalchemy psycopg2
+    (if psycopg2 fails to in stall use the binary ---- pip install psycopg2-binary ----)
     -deactivate
     -python3 postgres.py
     -in browser go to http://localhost:5000/
