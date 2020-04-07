@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    background-color: bisque;
+    background-color: steelblue;
+    color: whitesmoke;
 }
 
 .center{
@@ -52,9 +53,20 @@ table {
   } 
   
   th {
-    background-color: darkgray; 
+    background-color: rgb(86, 173, 124);
   }
   
   tr:nth-child(even) { 
-    background-color: #c5c5c5; 
+    background-color: rgb(86, 173, 124);
   } 
+
+  .button{
+      padding: 1em;
+      border-radius: 5px;
+      background-color: green;
+      color: honeydew;
+  }
+
+  .button:hover{
+    background-color: rgb(0, 100, 0);
+  }
